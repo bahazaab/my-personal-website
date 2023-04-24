@@ -29,8 +29,7 @@
                         </div>
                     </div>
                     <div class="w-full pt-6 sm:pt-10">
-                        <label class="block pb-3 font-body font-medium text-primary dark:text-white">Email
-                            Address</label>
+                        <label class="block pb-3 font-body font-medium text-primary dark:text-white">Message</label>
                         <textarea id="message" cols="30" rows="9"
                             placeholder="Tell me all the things that you think I need to hear…"
                             class="w-full border border-primary bg-grey-lightest px-5 py-4 font-body font-light text-primary placeholder-primary transition-colors focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary dark:text-white"></textarea>
