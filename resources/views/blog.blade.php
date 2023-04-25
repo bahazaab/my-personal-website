@@ -12,16 +12,14 @@
 
                 <div class="pt-3 sm:w-3/4">
                     <p class="font-body text-xl font-light text-primary dark:text-white">
-                        Articles, tutorials, snippets, rants, and everything else. Subscribe for
-                        updates as they happen.
+                        Articles, tutorials, snippets, rants, and everything else.
                     </p>
                 </div>
 
-                @for ($i = 0; $i < 6; $i++)
-                    <x-blog-item />
-                @endfor
+                @foreach ($posts as $post)
+                    <x-blog-item :post="$post" />
+                @endforeach
 
-                
                 <div class="flex py-10 lg:p-16 ">
                     <span
                         class="cursor-pointer border-2 border-secondary px-3 py-1 font-body font-medium text-secondary">1</span>
@@ -37,4 +35,7 @@
             </div>
         </div>
     </div>
+
+    <div> {{ $posts->links() }}</div>
+
 </x-layout>

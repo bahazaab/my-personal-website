@@ -6,10 +6,10 @@
                     <img src="/assets/img/author.png" class="h-16 w-16" alt="author" />
                 </div>
                 <h1 class="pt-3 font-body text-4xl font-semibold text-primary dark:text-white md:text-5xl lg:text-6xl">
-                    Hi, I`m {{fake()->name()}}.
+                    Hi, I`m {{ fake()->name() }}.
                 </h1>
                 <p class="pt-3 font-body text-xl font-light text-primary dark:text-white">
-                    A software engineer and {{fake()->words(40,true)}}, {{fake()->country()}}.
+                    A software engineer and {{ fake()->words(40, true) }}, {{ fake()->country() }}.
                 </p>
 
             </div>
@@ -23,13 +23,13 @@
                 </div>
                 <div>
                     <p class="font-body font-light text-primary dark:text-white">
-                        {{fake()->paragraph(5)}}
+                        {{ fake()->paragraph(5) }}
                         <br />
                         <br />
-                        {{fake()->paragraph(5)}}
+                        {{ fake()->paragraph(5) }}
                         <br />
                         <br />
-                        {{fake()->paragraph(5)}}
+                        {{ fake()->paragraph(5) }}
                     </p>
                 </div>
             </div>
@@ -43,9 +43,11 @@
                 </div>
 
                 <div>
-                    @for ($i = 0; $i < 6; $i++)
-                        <x-project-item :path="'/'" :title="'TailwindCSS'" :description="'Rapidly build modern websites without ever leaving your HTML.'" />
-                    @endfor
+                    @foreach ($projects as $project)
+                        <x-project-item 
+                            :path="$project->url" :title="$project->title" :description="$project->excerpt" 
+                        />
+                    @endforeach
                 </div>
 
             </div>

@@ -6,7 +6,7 @@
          {{$title}} 
         </h4>
         <p class="font-body font-light text-primary dark:text-white">
-         {{$description}} Rapidly build modern websites without ever leaving your HTML.
+         {{$description}} 
         </p>
     </span>
     <span class="w-1/10">
