@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get(
     '/',
-    fn () => view('welcome',[
+    fn () => view('intro',[
         'projects'=>Projects::latest()->get()
         ]
     )
@@ -24,7 +24,9 @@ Route::get(
 );
 
 Route::get('/blog/{post:id}', [PostsController::class,'show']);
+
 Route::get('/contact', fn () => view('contact'));
+
 Route::post('/contact/message', [MessagesController::class,'store']);
 
 Route::get('/uses', fn () => view('uses'));

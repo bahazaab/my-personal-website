@@ -3,13 +3,13 @@
         <div class="container mx-auto">
             <div class="border-b border-grey-lighter py-16 lg:py-20">
                 <div>
-                    <img src="/assets/img/author.png" class="h-16 w-16" alt="author" />
+                    <img src="https://cdn-icons-png.flaticon.com/512/5556/5556468.png" class="rounded-full " alt="author" width="100" height="100" />
                 </div>
                 <h1 class="pt-3 font-body text-4xl font-semibold text-primary dark:text-white md:text-5xl lg:text-6xl">
-                    Hi, I`m {{ fake()->name() }}.
+                    Hi, I`m {{env('profile_name')}}.
                 </h1>
                 <p class="pt-3 font-body text-xl font-light text-primary dark:text-white">
-                    A software engineer and {{ fake()->words(40, true) }}, {{ fake()->country() }}.
+                    A software engineer and {{ fake()->words(40, true) }}, Jordan State.
                 </p>
 
             </div>
@@ -44,9 +44,9 @@
 
                 <div>
                     @foreach ($projects as $project)
-                        <x-project-item 
-                            :path="$project->url" :title="$project->title" :description="$project->excerpt" 
-                        />
+                            <x-project-item 
+                                :path="$project->url" :title="$project->title" :description="$project->excerpt" 
+                            />
                     @endforeach
                 </div>
 

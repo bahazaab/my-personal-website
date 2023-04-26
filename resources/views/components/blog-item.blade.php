@@ -8,7 +8,7 @@
             class="block font-body text-lg font-semibold text-primary transition-colors hover:text-green dark:text-white dark:hover:text-secondary">
             <div class="flex">
                 <div class=" w-1/3">
-                    <img src="{{ $post->image_url }}" alt="image" width="150">
+                    <img src="{{ $post->image_url }}" alt="image" width="150" style="border-radius: 0.5rem">
                 </div>
                 <div class="w-2/3 pl-5">
                     <h1 class="text-4xl">{{ $post->title }}</h1>

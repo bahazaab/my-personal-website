@@ -5,7 +5,7 @@
                 <div class="flex border-b border-grey-lighter pb-8 sm:pb-12 ">
 
                     <div class="w-1/3" style="margin-right: 3%;margin-top:5%">
-                        <img src="{{ $post->image_url }}" alt="image" width="350"/>
+                        <img src="{{ $post->image_url }}" alt="image" width="350" style="border-radius: 0.5rem"/>
                     </div>
 
                     <div>
@@ -43,9 +43,6 @@
                     <a href="/">
                         <i
                             class="bx bxl-linkedin pl-2 text-2xl text-primary transition-colors hover:text-secondary dark:text-white dark:hover:text-secondary"></i></a>
-                    <a href="/">
-                        <i
-                            class="bx bxl-reddit pl-2 text-2xl text-primary transition-colors hover:text-secondary dark:text-white dark:hover:text-secondary"></i></a>
                 </div>
             </div>
         </div>

@@ -1,0 +1,9 @@
+{
+    "projects": [
+        {
+            "title": "Project X",
+            "description": "A web application that allows users to...",
+            "link": "https://github.com/your-username/project-x.git"
+        }
+    ]
+}

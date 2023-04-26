@@ -4,10 +4,10 @@
     <div class="flex items-center justify-between py-6 lg:py-10">
         <a href="/" class="flex items-center">
             <span href="/" class="mr-2">
-                <img src="/assets/img/logo.svg" alt="logo" />
+                <img src="{{env('profile_logo')}}" alt="logo" width="75" />
             </span>
             <p class="hidden font-body text-2xl font-bold text-primary dark:text-white lg:block">
-                {{ fake()->name() }}
+                {{env('profile_name')}}
             </p>
         </a>
         <div class="flex items-center lg:hidden">
