@@ -1,21 +1,33 @@
 <?php
 
+use App\Http\Controllers\MessagesController;
+use App\Http\Controllers\PostsController;
+use App\Models\Messages;
+use App\Models\Posts;
+use App\Models\Projects;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+Route::get(
+    '/',
+    fn () => view('intro',[
+        'projects'=>Projects::latest()->get()
+        ]
+    )
+);
 
-Route::get('/', function () {
-    for ($i=0;$i<7;$i++)
-            $i+1;
+Route::get(
+    '/blog', 
+    fn () => view('blog',[
+        'posts'=>Posts::latest()->paginate(5)
+        ]
+    )
+);
 
-    return view('welcome');
-});
+Route::get('/blog/{post:id}', [PostsController::class,'show']);
+
+Route::get('/contact', fn () => view('contact'));
+
+Route::post('/contact/message', [MessagesController::class,'store']);
+
+Route::get('/uses', fn () => view('uses'));
+
